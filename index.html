@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        canvas {
+            display: block;
+            width: 100%; /* Make canvas full width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #restartButton, #startButton {
+            position: absolute;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10; /* Ensure buttons are above canvas */
+        }
+        #startButton {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00ff00;
+        }
+        #restartButton {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffcc00;
+            display: none; /* Initially hidden */
+        }
+        #resultMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: black;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <button id="startButton">Start Game</button>
+    <button id="restartButton">Play Again</button>
+    <div id="resultMessage"></div>
+    <script src="script.js"></script>
+</body>
+</html>
