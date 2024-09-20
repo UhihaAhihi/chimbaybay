@@ -41,7 +41,7 @@ let countdownTime = 3; // Thời gian đếm ngược trước khi bắt đầu
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = Math.min(window.innerHeight * 1, 1500); // Chiều cao tối đa 500px
+    canvas.height = Math.min(window.innerHeight * 1, 1800); // Chiều cao tối đa 1800px
 }
 
 function initializeGame() {
